@@ -3,13 +3,19 @@
   <div>
     <% if @visitor %>
       <h1 style='text-align:center;color:red; text-shadow:1px 1px 3px rgba(0,0,0,.2)'>
-        Hello, <%= @visitor %></h1>
+        Hello, <%= @visitor %>!</h1>
+
+    <% else %>
+      <form action="/hello">
+        <h1 style="text-align:center;">My name is <%= @name %>.</h1>
+        <h1 style="text-align:center">What's your name?</h1>
+        <div style="width:45%; margin:0 auto; padding-left:5em;">
+        <input type="text" name="name">
+        <input type="submit" value="Submit">
+      </div>
+      </form>
     <% end %>
-    <% if @name %>
-    <h1 style='text-align:center; color:#222;text-shadow:1px 1px 3px rgba(0,0,0,.3)'>
-    My name is <%= @name  %></h1>
-    <% end %>
-      <img style='border:3px solid #00ffff; border-radius:40%;box-shadow:1px 3px 10px rgba(0,0,0,.3);width:100%;'
+    <img style='border:3px solid #00ffff; border-radius:40%;box-shadow:1px 3px 10px rgba(0,0,0,.3);width:100%;'
       src='http://bit.ly/1eze8aE'>
   </div>
 </section>
