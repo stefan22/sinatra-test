@@ -1,0 +1,15 @@
+
+<section style='width:600px; margin:0 auto; padding:1em;'>
+  <div>
+    <% if @visitor %>
+      <h1 style='text-align:center;color:red; text-shadow:1px 1px 3px rgba(0,0,0,.2)'>
+        Hello, <%= @visitor %></h1>
+    <% end %>
+    <% if @name %>
+    <h1 style='text-align:center; color:#222;text-shadow:1px 1px 3px rgba(0,0,0,.3)'>
+    My name is <%= @name  %></h1>
+    <% end %>
+      <img style='border:3px solid #00ffff; border-radius:40%;box-shadow:1px 3px 10px rgba(0,0,0,.3);width:100%;'
+      src='http://bit.ly/1eze8aE'>
+  </div>
+</section>
